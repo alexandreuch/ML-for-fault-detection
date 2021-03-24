@@ -195,14 +195,16 @@ def results1NN(X_test,Y_test,X_train,Y_train, tipo):
     kNN_accuracy_score = accuracy_score(Y_test, labels_prediction_test_data)
     recall_score = sklearn.metrics.recall_score(Y_test,labels_prediction_test_data)
     precision_score = sklearn.metrics.precision_score(Y_test, labels_prediction_test_data)
-
+    auc_score = sklearn.metrics.roc_auc_score(Y_test, labels_prediction_test_data)
+    
     print("Accuracy: %.4f" % kNN_accuracy_score)
     print("Precision: %.4f" % precision_score)
     print("Recall Score: %.4f" % recall_score)
+    print("Auc Score: %.4f" % auc_score)
 
 def main():
-    folder_path_v3 = '/home/pingulino/Alexandre/Thanos/segmented_database_1_v3/'
-    folder_path_v4 = '/home/pingulino/Alexandre/Thanos/segmented_database_1_v4/'
+    folder_path_v3 = '/home/pingulino/Alexandre/ML-for-fault-detection/segmented_database_1_v3/'
+    folder_path_v4 = '/home/pingulino/Alexandre/ML-for-fault-detection/segmented_database_1_v4/'
     
     audio_inst_v3,audio_class_list_v3 = audio_samples_and_classes(folder_path_v3)
     audio_inst_v4,audio_class_list_v4 = audio_samples_and_classes(folder_path_v4)
