@@ -1,4 +1,4 @@
-# KNN for fault detection :computer:
+# ML for fault detection :computer:
 
 Esse código foi baseado no artigo Detection of defective embedded bearings by sound analysis: a machine learning approach - Mario 2014. Nele o autor 
 testa filtros em bases de dados para tentar melhorar a eficácia de detecção de erros em engrenagens usando no final classificador 1NN.
